@@ -1,0 +1,47 @@
+{
+    "name": "persist/sql",
+    "description": "Persist Sql",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Arnold Daniels",
+            "email": "arnold@jasny.net",
+            "homepage": "https://jasny.net"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/jasny/persist-sql/issues",
+        "source": "https://github.com/jasny/persist-sql"
+    },
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "require-dev": {
+        "jasny/php-code-quality": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Persist\\Sql\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Persist\\Sql\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "phpstan analyse",
+            "phpunit --testdox --colors=always",
+            "phpcs -p src"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
